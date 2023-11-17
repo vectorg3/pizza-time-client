@@ -53,6 +53,6 @@ const deleteOrder = async (id) => {
   }
 };
 
-let url = "http://localhost:4444/";
+let url = "https://pizza-time-api.onrender.com/";
 renderOrders();
 

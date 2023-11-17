@@ -1,6 +1,6 @@
 const btnClick = async () => {
     document.getElementById('submit__button').disabled = true;
-    let url = 'http://localhost:4444/';
+    let url = 'https://pizza-time-api.onrender.com/';
 
     let name = document.getElementById('name').value;
     let phone = document.getElementById('phone').value;
