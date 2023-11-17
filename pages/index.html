@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../styles/header.css" />
-        <link rel="stylesheet" href="../styles/index.css" />
-        <title>Главная</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__container">
-                <div class="header__logo">
-                    PizzaTime
-                    <img class="logo" src="../images/logo.svg" alt="" />
-                </div>
-                <div class="header__nav">
-                    <a href="#" class="nav__item active">Главная</a>
-                    <a href="menu.html" class="nav__item">Меню</a>
-                    <a href="form.html" class="nav__item">Заказать доставку</a>
-                    <a href="orders.html" class="nav__item">Заказы</a>
-                </div>
-                <main>
-                    <div class="page__title">Главная</div>
-                    <div class="main__container">
-                        <img src="../images/main.jpeg" class="main__image" />
-                        <div class="main__description">
-                            <p>
-                                Что такое PizzaTime? Команда профессионалов,
-                                любовь к своему делу и, конечно же, пицца.
-                            </p>
-                            <p>
-                                Наша пиццерия построена по последнему слову
-                                техники. Сердце — современная конвейерная печь.
-                                Пицца готовится за 7 минуты и всегда вкусная, и
-                                ароматная. Каждый день мы сами замешиваем тесто
-                                — никаких полуфабрикатов и заморозки.
-                            </p>
-                            <p>
-                                Главный ингредиент правильной пиццы — сыр. Мы
-                                используем моцареллу только от надёжных
-                                поставщиков. Наши рецепты и граммовки не
-                                менялись со дня открытий наших филиалов в разных
-                                городах. В нашей пицце натуральный соус из
-                                томатов и много-много вкусной начинки
-                            </p>
-                        </div>
-                    </div>
-                </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <title>Главная</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          PizzaTime
+          <img class="logo" src="../images/logo.svg" alt="" />
+        </div>
+        <div class="header__nav">
+          <a href="#" class="nav__item active">Главная</a>
+          <a href="menu.html" class="nav__item">Меню</a>
+          <a href="form.html" class="nav__item">Заказать доставку</a>
+          <a href="orders.html" class="nav__item">Заказы</a>
+        </div>
+        <main>
+          <div class="page__title">Главная</div>
+          <div class="main__container">
+            <img src="../images/main.jpeg" class="main__image" />
+            <div class="main__description">
+              <p>
+                Что такое PizzaTime? Команда профессионалов, любовь к своему
+                делу и, конечно же, пицца.
+              </p>
+              <p>
+                Наша пиццерия построена по последнему слову техники. Сердце —
+                современная конвейерная печь. Пицца готовится за 7 минуты и
+                всегда вкусная, и ароматная. Каждый день мы сами замешиваем
+                тесто — никаких полуфабрикатов и заморозки.
+              </p>
+              <p>
+                Главный ингредиент правильной пиццы — сыр. Мы используем
+                моцареллу только от надёжных поставщиков. Наши рецепты и
+                граммовки не менялись со дня открытий наших филиалов в разных
+                городах. В нашей пицце натуральный соус из томатов и много-много
+                вкусной начинки
+              </p>
             </div>
-        </header>
-        <main></main>
-    </body>
+          </div>
+        </main>
+      </div>
+    </header>
+    <main></main>
+    <footer
+      style="text-align: center; font-size: 16px; margin-top: 10px"
+      id="footer"
+    ></footer>
+  </body>
 </html>
+
+<script>
+  let name = prompt("Введите ваше имя");
+  alert("Добро пожаловать, " + name);
+  let footer = document.getElementById("footer");
+  var options = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    timezone: "UTC",
+  };
+
+  let date = new Date().toLocaleString("ru", options);
+  let time = new Date().getTime().toLocaleString("ru");
+  
+  const now = new Date();
+  const h = now.getHours() <= 9 ? "0" + now.getHours() : now.getHours();
+  const m = now.getMinutes() <= 9 ? "0" + now.getMinutes() : now.getMinutes();
+  const s = now.getSeconds() <= 9 ? "0" + now.getSeconds() : now.getSeconds();
+  footer.innerHTML = date + " " + h + ":" + m + ":" + s;
+</script>
